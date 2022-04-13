@@ -1,0 +1,71 @@
+%Partie essentielle
+\documentclass[a4paper,12pt]{report} %style de document
+\usepackage[utf8]{inputenc} %encodage des caractères
+\usepackage[french]{babel} %paquet de langue français
+\usepackage[T1]{fontenc} %encodage de la police
+\usepackage[top=2cm,bottom=2cm,left=3cm,right=2cm]{geometry} %marges
+
+\usepackage{multicol}
+
+\usepackage{rotating}
+\usepackage{pifont}
+
+\usepackage[most]{tcolorbox}
+
+%Autre 
+    \input{./style/testStyle.tex} %Travaille sur les documents 
+% theorem
+	\input{./style/styleTheo.tex}
+
+\newcommand{\HRule}{\rule{\linewidth}{0.5mm}}
+
+\newcommand{\formatise}{Valerie RENARD}
+\newcommand{\stagiaire}{Annick BUREK, Jimy GAUMONT, Mahina DUVARD, Nadége ENAMA, Oksana VINIARSKA, Vincent DUFOUR, Vincent ROUELLE, Baptiste POREE}
+
+\input{./style/style.tex}
+\input{./style/titl.tex}
+
+	%----------------------------------
+	%page de garde
+	%----------------------------------
+	 %% travail sur les page de grade et de style
+	 %% \maketitle	
+	 %% \input{./titre/title.tex} 
+	\input{./titre/titre.tex}
+	\makeatletter
+	
+	%------------------------------
+	%sommaire
+	
+	\begin{document} %début du document
+		
+		
+		
+	%------------------------------
+	
+	\tableofcontents %table des matier automatique
+	\thispagestyle{empty}
+	\setcounter{page}{0}
+	\newpage %saut de page
+	
+	
+	%------------------------------
+	%page
+	%------------------------------	
+	\part{Information}
+	\input{./Parties/Intro.tex}
+	\part{Contexte du Projet}
+	\input{./Parties/ContexteProjet.tex}
+	\part{Caractéristiques fonctionnelles du futur projet}
+	\input{./Parties/CarateristiqueFuturProjet.tex}
+	\input{./Parties/CasUtilisation.tex}
+	\part{Caractéristiques non fonctionnelles du futur projet}
+	\input{./Parties/CarateristiqueNFFuturProjet.tex}
+	\part{Conditions de la recette du projet Mise} % en Situation et livraison}
+	\input{./Parties/ConditionRecetteProjet.tex}
+	\part{Gains tangibles attendus par la réalisation du projet}
+	\input{./Parties/GainTangibles.tex}
+	\part{Points ouverts (facultatif)}
+	\input{./Parties/PointOuverts.tex}
+	\part{Document Annexe}
+\end{document}
